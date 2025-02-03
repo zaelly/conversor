@@ -1,3 +1,12 @@
 body{
-    
+    width: 100%;
+    height: auto;
+}
+.navbar{
+    border-bottom: 1px solid #fff;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
