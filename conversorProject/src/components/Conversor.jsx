@@ -10,8 +10,6 @@ const Conversor = () => {
 
     //1° se tiver link e o btn de converter for clicado entao vai aparecer uma mensagem 
 
-    let linkName = document.querySelector("#linkName");
-
     function handleConvert(){
         setDownloadLink(convert);
         if(convert.trim() !== ""){
@@ -20,12 +18,12 @@ const Conversor = () => {
             if(regex.test(convert)){
                 console.log("Sucesso!")
                 contagemRegressiva()
-                linkName.value('');
+                setConvert("");
             }else {
-                linkName.value('Erro: O link inserido não é válido.');
+                setConvert('Erro: O link inserido não é válido.');
               }
         } else {
-            linkName.value('Por favor, adicione um link para converter.');
+            setConvert('Por favor, adicione um link para converter.');
         }
     }
 
